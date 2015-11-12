@@ -1,0 +1,76 @@
+//=============
+//= BASE SCSS =
+//=============
+
+$title_color: rgb(20,20,20);
+$blue: rgb(0,0,255);
+$off_white: rgb(200,200,200);
+
+
+html {
+  @include vendor-prefix(box-sizing, border-box);
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  min-height: 10px;
+  width: 100%;
+
+  background: black;
+
+  color: $off_white;
+
+  text-align: center;
+}
+
+#navigation {
+  position: relative;
+  ul {
+    li {
+      display: inline;
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color:$off_white;
+      }
+      a:hover {
+        color:red;
+      }
+      a:active {
+        color: green;
+      }
+      a:visited {
+        color: $off_white;
+      }
+    }
+  }
+
+  font-size: 1em;
+  font-weight: 300;
+
+  background: rgb(20,20,20);
+}
+
+#parts_view {
+  position: fixed;  //makes full bleed background work
+
+  background: url('/img/bg_lightwoodfloor_sm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: $title_color;
+
+  height: 100%;
+  width: 100%;
+}
+
