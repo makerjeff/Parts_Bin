@@ -1,0 +1,96 @@
+/*MASTER STYLES*/
+
+/*==================
+  = GENERIC STYLES =
+  ==================
+*/
+
+html {
+  background: rgb(240,240,240);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+}
+
+sup {
+  color: rgb(100, 100, 100);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 1px rgb(100,100,100) dashed;
+}
+
+footer {
+  position: relative;
+  height: 150px;
+}
+
+.mugshot {
+  position: relative;
+  height: 200px;
+  border-radius: 50%;
+
+}
+
+.sub_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(100,100,100);
+}
+
+#navigation li{
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.indent {
+  padding-left: 30px;
+}
+
+/*=================== 
+  = RESUME SPECIFIC =
+  ===================
+*/
+
+.contact_info {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+}
+
+.inline {
+  display: inline;
+}
+
+.sections{
+  margin: 10px 20% 10px 20%;
+  padding: 10px 0 10px 0;
+  max-width: 800px;
+}
+
+.sections, ul, li {
+  padding: 0 0 0 20px;
+}
+
+#user_name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+

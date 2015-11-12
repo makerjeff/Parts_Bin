@@ -1,0 +1,148 @@
+[
+  {
+    "section": "info",
+    "data": {
+      "name" : "Jefferson Wu",
+      "title" : "Creative Technologist",
+      "phone" : "626.780.8313",
+      "email" : "hirejeffwu@gmail.com",
+      "website" : "www.jeffersonwu.com"
+    }
+  },
+  {
+    "section": "experience",
+    "exp_roles": [
+      {
+        "exp_title":"Creative Technologist",
+        "exp_company":"TBWA\\CHIAT\\DAY",
+        "exp_length":"2014 - Present",
+        "exp_projects": [
+          {
+            "client":"Miller",
+            "project":"BeerYourSelfie"
+          },
+          {
+            "client":"Disney",
+            "project":"Avengers Initiative"
+          },
+          {
+            "client":"Pepsi",
+            "project":"Can Microphone"
+          },
+          {
+            "client":"Nissan",
+            "project":"Titan Workshop"
+          },
+          {
+            "client":"Project: Underwood",
+            "project":"VR Netflix pitch"
+          },
+          {
+            "client":"TBWA\\CHIAT\\DAY",
+            "project":"The Pipeline visualizer"
+          }
+        ],
+        "exp_duties": "Web development, VR development, prototyping, concept design, 3D design & 3D printng, robotcs, mechanical design, tech talks."
+      },
+      {
+        "exp_title":"3D Motion / VFX Generalist",
+        "exp_company":"TBWA\\CHIAT\\DAY",
+        "exp_length":"2012-2014",
+        "exp_projects": [
+          {
+            "client":"Adidas",
+            "project":"I Am Brazuca: Official Ball of FIFA World CupTM"
+          },
+          {
+            "client":"Nissan",
+            "project":"Rogue New Years Eve Times Square billboard animations"
+          },
+          {
+            "client":"Nissan",
+            "project":"Usain Bolt vs GT-R airport kiosk ads"
+          },
+          {
+            "client":"Energizer",
+            "project":"Energizer Bunny animations"
+          },
+          {
+            "client":"Grammys",
+            "project":"Official website"
+          },
+          {
+            "client":"Greygoose",
+            "project":"Intrinsic videos"
+          },
+          {
+            "client":"Infiniti",
+            "project":"Q50 Aurasma Interactive App"
+          },
+          {
+            "client":"Kraft",
+            "project":"Zesty Guy"
+          },
+          {
+            "client":"Nissan",
+            "project":"Leaf: Electric Corridor"
+          },
+          {
+            "client":"Nissan",
+            "project":"Innovation Garage trailer"
+          }
+          
+        ],
+        "exp_duties": "Motion design, 3D modeling, 3D animation, compositing, cinematography, video editing, sound design, 3D printing, creative technology"
+      },
+      {
+        "exp_title":"Visual Effects Supervisor / Generalist",
+        "exp_length":"2010-2012",
+        "exp_clients": "Greenlight MM, The Viral Factory, Sunnyland Pictures, Turbo Panda Productions, JWXSTUDIOS",
+        "exp_projects": [
+          "Backyard Safari","Other Lives \"For 12\" Official Music Video","Qualcomm: Convergeance", "Qualcomm: Mirasol \"Butterflies\"", "Geoscience tech demo","Raw Brute short pilot film", "DRONE short film" 
+        ],
+        "exp_duties": "On-set vfx supervision, 3D modeling, 3D animation, compositing, matte painting, matchmoving, previsualization, look development"
+      },
+      {
+        "exp_title":"Freelance 3D Visual Effects Artist",
+        "exp_length":"2005-2010",
+        "exp_clients":"TBWA\\CHIAT\\DAY, The Viral Factory, Davis Elen Interactive, Dutch Monaco, Greenlight MM, Bandito Brothers"
+      }
+    ]
+  },
+  {
+    "section": "skills",
+    "sk_master" : [
+      {
+        "sk_heading" : "Creative Technology",
+        "sk_data" : [
+          "Web Development (HTML5, CSS, Javascript, PHP, MySQL)",
+          "VR\\Game Development (Unity C#",
+          "Robotics (Electronics, Arduino, Python)",
+          "Prototyping",
+          "3D design & 3d printing",
+          "Mechanical design"
+        ]
+      },
+      {
+        "sk_heading" : "Visual Effects & Motion Design",
+        "sk_data" : [
+          "Concept sketching",
+          "3D modeling",
+          "3D animation",
+          "Compositing",
+          "VFX supervision"
+        ]
+      },
+      {
+        "sk_heading" : "Film & Video",
+        "sk_data" : [
+          "Storyboarding & Animatics",
+          "Directing",
+          "Producing",
+          "Cinematography",
+          "Editing"
+        ]
+      }
+    ]
+  }
+]
