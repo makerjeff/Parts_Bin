@@ -5,33 +5,17 @@ var resumeApp = angular.module('resumeAppName', ['ngRoute']);
 
 //configure app
 resumeApp.config(['$routeProvider', function($routeProvider){
-  
-  //when someone navigates to '/about'
-  $routeProvider.when('/about', {
-    templateUrl:'partials/about.html',
-    controller:'DebugController'
+
+  //navigate to the parts page
+  $routeProvider.when('/parts', {
+    templateUrl:'partials/parts.html',
+    controller:'PartsController'
   });
-  
-  //when someone navigates to '/resume'
-  $routeProvider.when('/resume', {
-    templateUrl:'partials/resume.html',
-    controller:'DebugController'
-  });
-  
-  //when someone navigates to '/work'
-  $routeProvider.when('/work', {
-    templateUrl:'partials/work.html',
-    controller:'DebugController'
-  });
-  
-  $routeProvider.when('/bios', {
-    templateUrl:'partials/bios.html',
-    controller:'DebugController'
-  });
-  
+
+
   //any other location, redirect to about page
   $routeProvider.otherwise({
-    redirectTo:'/about'
+    redirectTo:'/parts'
   });
 }]);
 
@@ -57,8 +41,8 @@ resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope,
 
 //bio section controller
 resumeApp.controller('BiosController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $http.get('js/data.json').success(function(data) {
-    $scope.people = data;
+      $http.get('js/data.json').success(function(data) {
+        $scope.people = data;
   });
 }]);
 
