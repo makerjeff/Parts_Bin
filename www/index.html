@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 
 <html ng-app="resumeAppName">
-  <head>
-<!-- SCRIPTS-->
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-route.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/data.json"></script>
-    <script src="js/about.json"></script>
-    <script src="js/resume.json"></script>
-<!-- FONTS -->
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-  </head>
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- STYLES-->
-  <link rel="stylesheet" type="text/css" href="/scss/style.css">
+    <head>
+        <!-- SCRIPTS-->
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/about.json"></script>
+        <script src="js/resume.json"></script>
+        <!-- FONTS -->
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="/scss/style.css">
+    </head>
 
-  <body>
 
-    <div id="navigation" ng-controller="NavController">
-      <ul>
-        <li ng-repeat="item in links">
-            <a href="{{item.url}}">{{item.name}}</a>
+    <body>
 
-        </li>
-      </ul>
-    </div>
+        <div id="navigation" ng-controller="NavController">
+            <ul>
+                <li ng-repeat="item in links">
+                    <a href="{{item.url}}">{{item.name}}</a>
 
-<!-- VIEW -->
-    <div id="this_app_view" ng-view>
-    </div>
-  </body>
+                </li>
+            </ul>
+        </div>
 
-<footer>
+        <!-- VIEW -->
+        <div id="this_app_view" ng-view>
+        </div>
+    </body>
+
+    <footer>
 
     Copyright 2015-2016 &copy; Jefferson Wu. All rights reserved.
-</footer>
+    </footer>
 
 
 </html>

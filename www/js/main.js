@@ -12,7 +12,6 @@ resumeApp.config(['$routeProvider', function($routeProvider){
     controller:'PartsController'
   });
 
-
   //any other location, redirect to about page
   $routeProvider.otherwise({
     redirectTo:'/parts'
@@ -23,7 +22,7 @@ resumeApp.config(['$routeProvider', function($routeProvider){
 //DEFINE CONTROLLERS
 
 //DEBUG message section controller
-resumeApp.controller('DebugController', ['$scope', '$http','$sce', function($scope, $http, $sce) {
+resumeApp.controller('DebugController', ['$scope','$http','$sce', function($scope, $http, $sce) {
   
   //$test variable
   $scope.init_message = 'App is fully functional';
@@ -39,12 +38,6 @@ resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope,
   });
 }]);
 
-//bio section controller
-resumeApp.controller('BiosController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-      $http.get('js/data.json').success(function(data) {
-        $scope.people = data;
-  });
-}]);
 
 //about section controller
 resumeApp.controller('AboutController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {

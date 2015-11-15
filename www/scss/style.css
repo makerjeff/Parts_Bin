@@ -60,14 +60,16 @@ h1 {
 footer {
   position: fixed;
   bottom: 0;
-  min-height: 10px;
+  min-height: 1.0em;
   width: 100%;
   background: black;
   color: #c8c8c8;
-  text-align: center; }
+  text-align: center;
+  font-size: 0.75em; }
 
 #navigation {
   position: relative;
+  height: 1em;
   font-size: 1em;
   font-weight: 300;
   background: #141414; }
@@ -93,5 +95,13 @@ footer {
   color: #141414;
   height: 100%;
   width: 100%; }
+
+#bin_title {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  border: 5px solid black;
+  width: 200px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

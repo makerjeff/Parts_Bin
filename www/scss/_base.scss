@@ -9,7 +9,7 @@ $off_white: rgb(200,200,200);
 
 html {
   @include vendor-prefix(box-sizing, border-box);
-  font-size: 16px;
+  font-size: 16px; //1em
   font-family: "PT Sans", sans-serif;
 }
 
@@ -22,7 +22,7 @@ footer {
   position: fixed;
   bottom: 0;
 
-  min-height: 10px;
+  min-height: 1.0em;
   width: 100%;
 
   background: black;
@@ -30,10 +30,13 @@ footer {
   color: $off_white;
 
   text-align: center;
+
+  font-size: 0.75em;
 }
 
 #navigation {
   position: relative;
+  height: 1em;
   ul {
     li {
       display: inline;
@@ -72,5 +75,15 @@ footer {
 
   height: 100%;
   width: 100%;
+}
+
+
+#bin_title {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  border: 5px solid black;
+  width: 200px;
+  text-align: center;
 }
 
