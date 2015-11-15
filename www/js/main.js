@@ -1,45 +1,39 @@
 // main APP js file. Includes controllers
 
 //DEFINE THE APP
-var resumeApp = angular.module('resumeAppName', ['ngRoute']);
+var partsBinApp = angular.module('PartsBinAppName', ['ngRoute']);
 
 //configure app
-resumeApp.config(['$routeProvider', function($routeProvider){
-  
-  //when someone navigates to '/about'
-  $routeProvider.when('/about', {
-    templateUrl:'partials/about.html',
-    controller:'DebugController'
+partsBinApp.config(['$routeProvider', function($routeProvider){
+
+  //navigate to the parts page
+  $routeProvider.when('/parts', {
+    templateUrl:'partials/parts.html',
+    controller:'PartsController'
   });
-  
-  //when someone navigates to '/resume'
-  $routeProvider.when('/resume', {
-    templateUrl:'partials/resume.html',
-    controller:'DebugController'
-  });
-  
-  //when someone navigates to '/work'
-  $routeProvider.when('/work', {
-    templateUrl:'partials/work.html',
-    controller:'DebugController'
-  });
-  
-  $routeProvider.when('/bios', {
-    templateUrl:'partials/bios.html',
-    controller:'DebugController'
-  });
-  
+
   //any other location, redirect to about page
   $routeProvider.otherwise({
-    redirectTo:'/about'
+    redirectTo:'/parts'
   });
 }]);
 
 
 //DEFINE CONTROLLERS
 
+partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($scope, $http, $sce) {
+
+    $scope.name = 'Jeff';
+
+    $scope.stuff = {value:'dummy manual input'};
+
+    $http.get('js/data.json').success(function(data) {
+        $scope.bins = data;
+    });
+}]);
+
 //DEBUG message section controller
-resumeApp.controller('DebugController', ['$scope', '$http','$sce', function($scope, $http, $sce) {
+partsBinApp.controller('DebugController', ['$scope','$http','$sce', function($scope, $http, $sce) {
   
   //$test variable
   $scope.init_message = 'App is fully functional';
@@ -47,7 +41,7 @@ resumeApp.controller('DebugController', ['$scope', '$http','$sce', function($sco
 }]);
 
 //navigation controller
-resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope, $http, $sce) {
+partsBinApp.controller('NavController', ['$scope','$http','$sce', function($scope, $http, $sce) {
   //pull info from 'links.json'
   $http.get('js/links.json').success(function(data) {
     //load data array into $scope.links
@@ -55,15 +49,9 @@ resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope,
   });
 }]);
 
-//bio section controller
-resumeApp.controller('BiosController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $http.get('js/data.json').success(function(data) {
-    $scope.people = data;
-  });
-}]);
 
 //about section controller
-resumeApp.controller('AboutController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
+partsBinApp.controller('AboutController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
   //get data from about.json
   $http.get('js/about.json').success(function(data) {
     //returns JSON array, NOT OBJECT!
@@ -88,7 +76,7 @@ resumeApp.controller('AboutController', ['$scope', '$http', '$sce', function($sc
 }]);
 
 //RESUME SECTION CONTROLLER
-resumeApp.controller('ResumeController', ['$scope','$http','$sce', function ($scope, $http, $sce) {
+partsBinApp.controller('ResumeController', ['$scope','$http','$sce', function ($scope, $http, $sce) {
   
   $http.get('js/resume.json').success(function(data) {
     //grab all the data

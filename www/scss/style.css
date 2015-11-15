@@ -1,0 +1,187 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif; }
+
+h1 {
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif; }
+
+b {
+  font-weight: 700; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  min-height: 1.0em;
+  width: 100%;
+  background: black;
+  color: #c8c8c8;
+  text-align: center;
+  font-size: 0.75em; }
+
+#navigation {
+  position: relative;
+  height: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  background: #141414; }
+  #navigation ul li {
+    display: inline; }
+    #navigation ul li a {
+      text-decoration: none; }
+    #navigation ul li a:link {
+      color: #c8c8c8; }
+    #navigation ul li a:hover {
+      color: red; }
+    #navigation ul li a:active {
+      color: green; }
+    #navigation ul li a:visited {
+      color: #c8c8c8; }
+
+#parts_background {
+  position: fixed;
+  top: 0;
+  background: url("/img/bg_lightwoodfloor_sm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: #141414;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
+#top_bar {
+  position: fixed;
+  top: 0;
+  min-height: 1em;
+  z-index: 5;
+  width: 100%;
+  background: black; }
+
+#tools_div {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 10px 0; }
+  #tools_div input {
+    padding: 10px;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border-style: none;
+    border-radius: 5px;
+    color: black; }
+  #tools_div input:focus {
+    outline: none; }
+  #tools_div .button {
+    color: black;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 30%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-right: 10px; }
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.3; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+  opacity: 0.3; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+  opacity: 0.3; }
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.3; }
+
+#bin_title {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  border: 5px solid black;
+  width: 200px;
+  text-align: center; }
+
+#bin_body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 0 1em 0; }
+
+.large_numbers {
+  font-weight: 700;
+  font-size: 3em; }
+
+.bin {
+  position: relative;
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  height: 100px;
+  border: 5px solid black; }
+
+/*media.css, responsible for media queries*/
+/* mobile state -- styles the screen, 'and' max-width */
+@media only screen and (max-width: 568px) {
+  .bin {
+    width: 85%;
+    height: 50px; } }
+/* tablet state -- styles the screen, 'and' min-width */
+/* covers anything above 1024px */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,127 @@
+//=============
+//= BASE SCSS =
+//=============
+
+$title_color: rgb(20,20,20);
+$blue: rgb(0,0,255);
+$off_white: rgb(200,200,200);
+$search_input_color: rgba(255,255,255,0.1);
+
+
+html {
+  @include vendor-prefix(box-sizing, border-box);
+  font-size: 16px; //1em
+  font-family: "PT Sans", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+b {
+  font-weight: 700;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  min-height: 1.0em;
+  width: 100%;
+  background: black;
+  color: $off_white;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+#navigation {
+  position: relative;
+  height: 1em;
+  ul {
+    li {
+      display: inline;
+      a {text-decoration: none;}
+      a:link {color:$off_white;}
+      a:hover {color:red;}
+      a:active {color: green;}
+      a:visited {color: $off_white;}
+    }
+  }
+  font-size: 1em;
+  font-weight: 300;
+  background: rgb(20,20,20);
+}
+
+#parts_background {
+  position: fixed;  //makes full bleed background work
+  top: 0;
+  background: url('/img/bg_lightwoodfloor_sm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: $title_color;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#top_bar {
+  position: fixed;
+  top: 0;
+  min-height: 1em;
+  z-index: 5;
+  width: 100%;
+  background: black;
+}
+
+#tools_div {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 0 10px 0;
+
+  input {
+    padding: 10px;
+    font-size: 1.5em;
+    background: $search_input_color;
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  .button {
+    color: black;
+    background: rgba(255,255,255, 0.0);
+    border-radius: 30%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-right: 10px;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+  opacity: 0.3;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: white;
+  opacity: 0.3;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
