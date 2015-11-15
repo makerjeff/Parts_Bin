@@ -86,15 +86,17 @@ footer {
     #navigation ul li a:visited {
       color: #c8c8c8; }
 
-#parts_view {
+#parts_background {
   position: fixed;
+  top: 0;
   background: url("/img/bg_lightwoodfloor_sm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   color: #141414;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 #bin_title {
   margin: 10px auto;
@@ -103,5 +105,47 @@ footer {
   border: 5px solid black;
   width: 200px;
   text-align: center; }
+
+#bin_body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+#top_bar {
+  position: fixed;
+  top: 0;
+  min-height: 1em;
+  z-index: 5;
+  width: 100%;
+  background: black; }
+
+/*media.css, responsible for media queries*/
+/* mobile state -- styles the screen, 'and' max-width */
+@media only screen and (max-width: 568px) {
+  .bin {
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    width: 90%;
+    height: 50px;
+    border: 5px solid black; } }
+/* tablet state -- styles the screen, 'and' min-width */
+@media only screen and (min-width: 569px) and (max-width: 1024px) {
+  .bin {
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    height: 100px;
+    border: 5px solid black; } }
+/* covers anything above 1024px */
+@media only screen and (min-width: 1025px) {
+  .bin {
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    height: 100px;
+    border: 5px solid black; } }
 
 /*# sourceMappingURL=style.css.map */

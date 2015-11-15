@@ -40,41 +40,29 @@ footer {
   ul {
     li {
       display: inline;
-      a {
-        text-decoration: none;
-      }
-      a:link {
-        color:$off_white;
-      }
-      a:hover {
-        color:red;
-      }
-      a:active {
-        color: green;
-      }
-      a:visited {
-        color: $off_white;
-      }
+      a {text-decoration: none;}
+      a:link {color:$off_white;}
+      a:hover {color:red;}
+      a:active {color: green;}
+      a:visited {color: $off_white;}
     }
   }
-
   font-size: 1em;
   font-weight: 300;
-
   background: rgb(20,20,20);
 }
 
-#parts_view {
+#parts_background {
   position: fixed;  //makes full bleed background work
-
+  top: 0;
   background: url('/img/bg_lightwoodfloor_sm.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   color: $title_color;
-
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 
 
@@ -87,3 +75,19 @@ footer {
   text-align: center;
 }
 
+#bin_body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#top_bar {
+  position: fixed;
+  top: 0;
+  min-height: 1em;
+  z-index: 5;
+
+  width: 100%;
+
+  background: black;
+}

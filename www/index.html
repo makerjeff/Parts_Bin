@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app="resumeAppName">
+<html ng-app="PartsBinAppName">
     <head>
         <!-- SCRIPTS-->
         <script src="lib/angular.min.js"></script>
@@ -20,9 +20,8 @@
 
         <div id="navigation" ng-controller="NavController">
             <ul>
-                <li ng-repeat="item in links">
+                <li>
                     <a href="{{item.url}}">{{item.name}}</a>
-
                 </li>
             </ul>
         </div>

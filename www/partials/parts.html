@@ -1,7 +1,27 @@
-<section id="parts_view" ng-controller="PartsController">
-  <div id="bin_title">
-    <h1> PARTS BIN </h1>
-  </div>
+<section id="parts_view_container" ng-controller="PartsController">
+
+    <div id="parts_background"></div>
+    <div id="top_bar">ID ME</div>
+
+    <div id="bin_title">
+        <h1> {{name | uppercase }}'S PARTS BIN </h1>
+    </div>
+
+    <div id="bin_body">
+        <div class="bin">
+            {{stuff.value}}-ington
+        </div>
+
+        <div class="bin" ng-repeat="item in bins">
+            {{item.size}}: {{item.units}} <br/>
+            {{item.type}}
+
+
+        </div>
+
+    </div>
+
+
 
 
 </section>

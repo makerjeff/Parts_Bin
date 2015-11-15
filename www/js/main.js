@@ -1,10 +1,10 @@
 // main APP js file. Includes controllers
 
 //DEFINE THE APP
-var resumeApp = angular.module('resumeAppName', ['ngRoute']);
+var partsBinApp = angular.module('PartsBinAppName', ['ngRoute']);
 
 //configure app
-resumeApp.config(['$routeProvider', function($routeProvider){
+partsBinApp.config(['$routeProvider', function($routeProvider){
 
   //navigate to the parts page
   $routeProvider.when('/parts', {
@@ -21,8 +21,31 @@ resumeApp.config(['$routeProvider', function($routeProvider){
 
 //DEFINE CONTROLLERS
 
+partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($scope, $http, $sce) {
+
+    $scope.name = 'Jeff';
+
+    $scope.stuff = {value:'hideeho'};
+    $scope.bins = [
+        {'type':'hex bolt', 'size':'3M x 10', 'units': 5},
+        {'type':'hex bolt', 'size':'3M x 20', 'units': 10},
+        {'type':'hex bolt', 'size':'3M x 30', 'units': 15},
+        {'type':'hex bolt', 'size':'3M x 40', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 10', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 20', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 30', 'units': 20},
+        {'type':'hex bolt', 'size':'3M x 10', 'units': 5},
+        {'type':'hex bolt', 'size':'3M x 20', 'units': 10},
+        {'type':'hex bolt', 'size':'3M x 30', 'units': 15},
+        {'type':'hex bolt', 'size':'3M x 40', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 10', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 20', 'units': 20},
+        {'type':'hex bolt', 'size':'5M x 30', 'units': 20}
+    ];
+}]);
+
 //DEBUG message section controller
-resumeApp.controller('DebugController', ['$scope','$http','$sce', function($scope, $http, $sce) {
+partsBinApp.controller('DebugController', ['$scope','$http','$sce', function($scope, $http, $sce) {
   
   //$test variable
   $scope.init_message = 'App is fully functional';
@@ -30,7 +53,7 @@ resumeApp.controller('DebugController', ['$scope','$http','$sce', function($scop
 }]);
 
 //navigation controller
-resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope, $http, $sce) {
+partsBinApp.controller('NavController', ['$scope','$http','$sce', function($scope, $http, $sce) {
   //pull info from 'links.json'
   $http.get('js/links.json').success(function(data) {
     //load data array into $scope.links
@@ -40,7 +63,7 @@ resumeApp.controller('NavController', ['$scope','$http','$sce', function($scope,
 
 
 //about section controller
-resumeApp.controller('AboutController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
+partsBinApp.controller('AboutController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
   //get data from about.json
   $http.get('js/about.json').success(function(data) {
     //returns JSON array, NOT OBJECT!
@@ -65,7 +88,7 @@ resumeApp.controller('AboutController', ['$scope', '$http', '$sce', function($sc
 }]);
 
 //RESUME SECTION CONTROLLER
-resumeApp.controller('ResumeController', ['$scope','$http','$sce', function ($scope, $http, $sce) {
+partsBinApp.controller('ResumeController', ['$scope','$http','$sce', function ($scope, $http, $sce) {
   
   $http.get('js/resume.json').success(function(data) {
     //grab all the data
