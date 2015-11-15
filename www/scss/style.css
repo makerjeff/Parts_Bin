@@ -177,10 +177,6 @@ footer {
 
 /*media.css, responsible for media queries*/
 /* mobile state -- styles the screen, 'and' max-width */
-@media only screen and (max-width: 568px) {
-  .bin {
-    width: 85%;
-    height: 50px; } }
 /* tablet state -- styles the screen, 'and' min-width */
 /* covers anything above 1024px */
 
