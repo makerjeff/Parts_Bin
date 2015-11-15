@@ -21,16 +21,11 @@ h1 {
 footer {
   position: fixed;
   bottom: 0;
-
   min-height: 1.0em;
   width: 100%;
-
   background: black;
-
   color: $off_white;
-
   text-align: center;
-
   font-size: 0.75em;
 }
 
@@ -79,6 +74,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin: 0 0 1em 0;
 }
 
 #top_bar {
@@ -86,8 +82,6 @@ footer {
   top: 0;
   min-height: 1em;
   z-index: 5;
-
   width: 100%;
-
   background: black;
 }
