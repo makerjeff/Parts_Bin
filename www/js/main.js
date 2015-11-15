@@ -39,7 +39,6 @@ partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($s
     // test function
     $scope.funky = function(message) {
         console.log(message);
-        alert(message);
     };
 
 }]);
