@@ -25,23 +25,11 @@ partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($s
 
     $scope.name = 'Jeff';
 
-    $scope.stuff = {value:'hideeho'};
-    $scope.bins = [
-        {'type':'hex bolt', 'size':'3M x 10', 'units': 5},
-        {'type':'hex bolt', 'size':'3M x 20', 'units': 10},
-        {'type':'hex bolt', 'size':'3M x 30', 'units': 15},
-        {'type':'hex bolt', 'size':'3M x 40', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 10', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 20', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 30', 'units': 20},
-        {'type':'hex bolt', 'size':'3M x 10', 'units': 5},
-        {'type':'hex bolt', 'size':'3M x 20', 'units': 10},
-        {'type':'hex bolt', 'size':'3M x 30', 'units': 15},
-        {'type':'hex bolt', 'size':'3M x 40', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 10', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 20', 'units': 20},
-        {'type':'hex bolt', 'size':'5M x 30', 'units': 20}
-    ];
+    $scope.stuff = {value:'dummy manual input'};
+
+    $http.get('js/data.json').success(function(data) {
+        $scope.bins = data;
+    });
 }]);
 
 //DEBUG message section controller

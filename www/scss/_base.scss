@@ -5,6 +5,7 @@
 $title_color: rgb(20,20,20);
 $blue: rgb(0,0,255);
 $off_white: rgb(200,200,200);
+$search_input_color: rgba(255,255,255,0.1);
 
 
 html {
@@ -16,6 +17,10 @@ html {
 h1 {
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
+}
+
+b {
+  font-weight: 700;
 }
 
 footer {
@@ -60,23 +65,6 @@ footer {
   z-index: -1;
 }
 
-
-#bin_title {
-  margin: 10px auto;
-  padding: 10px;
-  position: relative;
-  border: 5px solid black;
-  width: 200px;
-  text-align: center;
-}
-
-#bin_body {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 0 0 1em 0;
-}
-
 #top_bar {
   position: fixed;
   top: 0;
@@ -85,3 +73,55 @@ footer {
   width: 100%;
   background: black;
 }
+
+#tools_div {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 0 10px 0;
+
+  input {
+    padding: 10px;
+    font-size: 1.5em;
+    background: $search_input_color;
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  .button {
+    color: black;
+    background: rgba(255,255,255, 0.0);
+    border-radius: 30%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-right: 10px;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+  opacity: 0.3;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: white;
+  opacity: 0.3;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.3;
+}
+

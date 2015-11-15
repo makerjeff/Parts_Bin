@@ -1,0 +1,13 @@
+[
+  {"type":"hex bolt", "size":"3M x 10", "units": 5},
+  {"type":"hex bolt", "size":"3M x 20", "units": 10},
+  {"type":"hex bolt", "size":"3M x 30", "units": 15},
+  {"type":"hex bolt", "size":"3M x 40", "units": 20},
+  {"type":"hex bolt", "size":"5M x 10", "units": 20},
+  {"type":"hex bolt", "size":"5M x 20", "units": 20},
+  {"type":"hex bolt", "size":"5M x 30", "units": 20},
+  {"type":"hex bolt", "size":"3M x 10", "units": 5},
+  {"type":"bearing", "size": "608", "units": 85},
+  {"type":"bearing", "size": "623", "units": 24},
+  {"type":"bearing", "size": "625", "units": 20}
+]

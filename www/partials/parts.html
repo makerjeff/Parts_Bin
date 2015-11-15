@@ -7,14 +7,28 @@
         <h1> {{name | uppercase }}'S PARTS BIN </h1>
     </div>
 
+    <div id="tools_div">
+        <input type="button" class="button" value="+">
+        <input type="text" max="100" size="27" ng-model="search_by" placeholder="search">
+
+    </div>
+
     <div id="bin_body">
         <div class="bin">
             {{stuff.value}}-ington
         </div>
 
-        <div class="bin" ng-repeat="item in bins">
-            {{item.size}}: {{item.units}} <br/>
-            {{item.type}}
+        <div class="bin" ng-repeat="item in bins | filter: search_by">
+
+            <b>type:</b> {{item.type}} <br/>
+            <b>size:</b> {{item.size}} <br/>
+
+            <div class="unit_count">
+                <span class="large_numbers">{{item.units}}</span> <br/>
+                <b>units left</b> <br/>
+            </div>
+
+
 
 
         </div>
