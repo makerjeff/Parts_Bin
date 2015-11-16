@@ -26,20 +26,6 @@ partsBinApp.config(['$routeProvider', function($routeProvider){
 partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($scope, $http, $sce) {
    //===== CONSTRUCTORS =====
 
-    //$scope.Bin = function(type, size, units, append_div) {
-    //    //variable declaration
-    //    this.type = type;
-    //    this.size = size;
-    //    this.units = 0;
-    //
-    //    this.container = document.createElement('div');
-    //    this.container.setAttribute('class','bin');
-    //    this.container.innerHTML = this.type + ', ' + this.size + ', ' + this.units;
-    //
-    //
-    //    append_div.appendChild(this.container);
-    //}
-
     //===== VARS ======
     $scope.name = 'Jeff';
     $scope.stuff = {value:'dummy manual input'};
@@ -52,16 +38,29 @@ partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($s
     //grab the button
     $scope.add_button = document.getElementById('add_button');
 
+    //grab CREATOR div
+    $scope.creator = document.getElementById('creator');
+    $scope.creator_type = document.getElementById('input_type');
+    $scope.creator_size = document.getElementById('input_size');
+    $scope.creator_units = document.getElementById('input_units');
+    $scope.creator.style.visibility = 'hidden';
+
     //NG-CLICK FUNCTIONS
     // test function
     $scope.funky = function(message) {
         console.log(message);
+        $scope.creator.style.visibility = 'visible';
     };
 
-    //grab bin body
-    var bin_container = document.getElementById('bin_body');
-    //append test bin
-    $scope.soloBin = new Bin('test type', 'test size', 54, bin_container);
+    $scope.say_something = function(message) {
+       modal_popper($scope);
+    };
+
+
 
 }]);
+
+function modal_popper($scope) {
+    console.log('hello');
+}
 

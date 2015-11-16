@@ -149,6 +149,30 @@ footer {
   color: white;
   opacity: 0.3; }
 
+.modal2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.75); }
+
+.modalbox2 {
+  width: 400px;
+  height: 250px;
+  background: #c8c8c8; }
+  .modalbox2 input {
+    background: rgba(255, 255, 255, 0.2); }
+
+.close_button {
+  font-size: 2em;
+  position: relative;
+  top: -85px;
+  left: 370px;
+  z-index: 500; }
+
 #bin_title {
   margin: 10px auto;
   padding: 10px;
