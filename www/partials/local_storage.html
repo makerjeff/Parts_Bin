@@ -1,0 +1,24 @@
+<section>
+    <h1>Local Storage Playground</h1>
+    <div id="sort_div">
+        Sort: <input id="sort_input" class="ls-input" type="text" ng-model="sort_stuff">
+    </div>
+
+    <div id="input_div">
+       Add: <input id="type_input" required type="text" class="ls-input" placeholder="type" size="10" ng-model="type">
+        <input id="size_input" required type="text" class="ls-input" size="10" ng-model="size">
+        <input id="stock_input" required type="number" class="ls-input" size="number" ng-model="stock">
+        <button id="add_button" class="ls-button" ng-click="CreateNewBin(type, size, stock)">+</button>
+    </div>
+
+    <div id="results_div">
+        <br>
+        <div ng-repeat="item in storageArray | filter:sort_stuff track by $index">
+           {{$index}} {{item.type}}, {{item.size}}, {{item.stock}}
+            <button ng-click="destroyBin(item)"></button>
+        </div>
+
+    </div>
+
+
+</section>

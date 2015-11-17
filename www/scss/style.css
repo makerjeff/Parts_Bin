@@ -199,6 +199,12 @@ footer {
   height: 100px;
   border: 5px solid black; }
 
+.ls-button {
+  font-size: 24px; }
+
+.ls-input {
+  font-size: 24px; }
+
 /*media.css, responsible for media queries*/
 /* mobile state -- styles the screen, 'and' max-width */
 /* tablet state -- styles the screen, 'and' min-width */
