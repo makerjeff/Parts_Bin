@@ -14,7 +14,7 @@
     <div id="results_div">
         <br>
         <div ng-repeat="item in storageArray | filter:sort_stuff track by $index">
-           {{$index}} {{item.type}}, {{item.size}}, {{item.stock}}
+           [{{$index}}] {{item.type}}, {{item.size}}, {{item.stock}}
             <button ng-click="destroyBin(item)"></button>
         </div>
 

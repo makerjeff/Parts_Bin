@@ -19,6 +19,20 @@ partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($s
 
 }]);
 
+// ===============================
+// == MODAL PRACTICE CONTROLLER ==
+// ===============================
+
+partsBinApp.controller('ModalPracticeController', ['$scope', function($scope) {
+
+    //copied from template
+    $scope.modalShown = false;
+    $scope.toggleModal = function() {
+        $scope.modalShown = !$scope.modalShown;
+    };
+
+}]);
+
 // =======================================
 // == LOCAL STORAGE TEST RND CONTROLLER ==
 // =======================================
