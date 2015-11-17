@@ -8,9 +8,8 @@
     </div>
 
     <div id="tools_div">
-        <input type="button" class="button" value="+">
+        <input type="button" id="add_button" class="button" value="+" ng-click="funky('this is way-some')">
         <input type="text" max="100" size="27" ng-model="search_by" placeholder="search">
-
     </div>
 
     <div id="bin_body">
@@ -18,7 +17,8 @@
             {{stuff.value}}-ington
         </div>
 
-        <div class="bin" ng-repeat="item in bins | filter: search_by">
+        <div class="bin" ng-repeat="item in bins | filter: search_by"
+             ng-click="say_something()">
 
             <b>type:</b> {{item.type}} <br/>
             <b>size:</b> {{item.size}} <br/>
@@ -27,16 +27,8 @@
                 <span class="large_numbers">{{item.units}}</span> <br/>
                 <b>units left</b> <br/>
             </div>
-
-
-
-
         </div>
-
     </div>
-
-
-
 
 </section>
 

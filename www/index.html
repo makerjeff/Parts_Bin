@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 
 <html ng-app="PartsBinAppName">
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <!-- SCRIPTS-->
         <script src="lib/angular.min.js"></script>
         <script src="lib/angular-route.min.js"></script>
+        <!--<script src="js/bins.js"></script>-->
         <script src="js/main.js"></script>
-        <script src="js/about.json"></script>
-        <script src="js/resume.json"></script>
         <!-- FONTS -->
         <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- STYLES -->
-        <link rel="stylesheet" type="text/css" href="/scss/style.css">
+        <link rel="stylesheet" type="text/css" href="scss/style.css">
     </head>
 
 
     <body>
 
-        <div id="navigation" ng-controller="NavController">
-            <ul>
-                <li>
-                    <a href="{{item.url}}">{{item.name}}</a>
-                </li>
-            </ul>
-        </div>
+        <div id="navigation"></div>
 
         <!-- VIEW -->
         <div id="this_app_view" ng-view>
         </div>
+
+        <!-- HIDDEN MODAL -->
+            <div id="creator" class="modal2">
+                <div class="modalbox2">
+                    <form>
+                        Input something: <br>
+                        <input id="input_type" type="text" placeholder="type" maxlength="45" placeholder="type"><br>
+                        <input id="input_size" type="text" placeholder="size" maxlength="45" placeholder="size"><br>
+                        <input id="input_units" type="number" placeholder="1"> <br>
+                        <button ng-click="funky('the button works')">create</button>
+                    </form>
+
+                    <div class="close_button" ng-click="funky('this is working too')">X</div>
+                </div>
+            </div>
     </body>
 
-    <footer>
 
+
+    <footer>
     Copyright 2015-2016 &copy; Jefferson Wu. All rights reserved.
     </footer>
 
