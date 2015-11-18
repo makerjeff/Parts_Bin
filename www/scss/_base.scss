@@ -21,6 +21,8 @@ html {
   @include vendor-prefix(box-sizing, border-box);
   font-size: 16px; //1em
   font-family: "PT Sans", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -158,21 +160,21 @@ footer {
 
 ::-webkit-input-placeholder {
   color: white;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 :-moz-placeholder { /* Firefox 18- */
   color: white;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
   color: white;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 :-ms-input-placeholder {
   color: white;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 

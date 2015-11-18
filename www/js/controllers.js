@@ -132,7 +132,7 @@ function clearInputValues() {
 
 // == ADD TO STORAGE ARRAY ==
 function addToArray(array, object){
-    array.push(object);
+    array.unshift(object);
 
     console.log(array);
 }
