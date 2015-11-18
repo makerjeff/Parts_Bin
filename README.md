@@ -1,5 +1,5 @@
-# Parts_Bin
-A simple web application to organize your hardware.
+# Parts Bin
+A simple web application to help keep track of your hardware stock.
 
 ## TODO:
 
