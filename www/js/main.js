@@ -32,7 +32,7 @@ partsBinApp.config(['$routeProvider', function($routeProvider){
   //navigate to the parts page
   $routeProvider.when('/parts', {
     templateUrl:'partials/parts.html',
-    controller:'PartsController'
+    controller:'LocalStorageController'
   });
 
   $routeProvider.when('/local', {

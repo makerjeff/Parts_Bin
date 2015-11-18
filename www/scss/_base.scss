@@ -7,6 +7,15 @@ $blue: rgb(0,0,255);
 $off_white: rgb(200,200,200);
 $search_input_color: rgba(255,255,255,0.1);
 
+* {
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+}
+
 
 html {
   @include vendor-prefix(box-sizing, border-box);
@@ -132,7 +141,7 @@ footer {
     outline: none;
   }
 
-  .button {
+  .parts_button {
     color: black;
     background: rgba(255,255,255, 0.0);
     border-radius: 30%;
@@ -143,6 +152,8 @@ footer {
     margin-right: 10px;
   }
 }
+
+
 
 
 ::-webkit-input-placeholder {

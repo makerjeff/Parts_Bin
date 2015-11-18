@@ -10,10 +10,10 @@
 
     <div id="create_new_div">
         <input id="type_input" type="text" max="100" size="27" ng-model="type" required placeholder="+type">
-        <input id="size_input" type="text" max="100" size="27" ng-model="size" required placeholder="+size">
-        <input id="stock_input" type="number" max="100" size="27" ng-model="stock" required placeholder="+stock">
-        <input type="button" id="add_button" class="button" value="+"
-               ng-click="stuffington('input: ' + type + ', ' + size + ', ' + stock)">
+        <input id="size_input" type="text" max="100" size="27" ng-model="size" required placeholder="+type">
+        <input id="stock_input" type="number" max="100" size="27" ng-model="stock" required placeholder="+unit stock">
+        <input type="button" id="add_button" class="parts_button" value="+"
+               ng-click="CreateNewBin(type, size, stock)">
     </div>
 
     <div id="search_div">
@@ -23,19 +23,27 @@
 
 
     <div id="bin_body">
-        <div class="bin">
-            {{stuff.value}}-ington
-        </div>
 
-        <div class="bin" ng-repeat="item in bins | filter: search_by"
-             ng-click="say_something()">
+
+        <div class="bin" draggable="true" ng-repeat="item in storageArray | filter: search_by track by $index">
 
             <b>type:</b> {{item.type}} <br/>
             <b>size:</b> {{item.size}} <br/>
 
             <div class="unit_count">
-                <span class="large_numbers">{{item.units}}</span> <br/>
-                <b>stock</b> <br/>
+                <span class="large_numbers">{{item.stock}}</span>
+                <span><b>units</b></span><br/>
+
+
+            </div>
+
+            <div class="bin_controls">
+                <button class="bin_button" ng-click="IncrementStock($index)">+</button>
+                <button class="bin_button" ng-click="DecrementStock($index)">-</button>
+            </div>
+
+            <div class="bin_killer">
+                <button class="bin_button" ng-click="DestroyBin(item)">X</button>
             </div>
         </div>
     </div>
