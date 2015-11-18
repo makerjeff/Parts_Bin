@@ -15,9 +15,9 @@
         <br>
         <div ng-repeat="item in storageArray | filter:sort_stuff track by $index">
             <div">
-                <button>+</button>
-                <button>-</button>
-                <button ng-click="destroyBin(item)">X</button>
+                <button ng-click="IncrementStock($index)">+</button>
+                <button ng-click="DecrementStock($index)">-</button>
+                <button ng-click="DestroyBin(item)">X</button>
                 [{{$index}}] {{item.type}}, {{item.size}}, stock: <b>{{item.stock}}</b>
             </div>
 

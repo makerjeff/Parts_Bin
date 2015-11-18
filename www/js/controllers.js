@@ -66,13 +66,6 @@ partsBinApp.controller('ModalPracticeController', ['$scope', function($scope) {
 //messing around with local storage
 partsBinApp.controller('LocalStorageController', ['$scope', function($scope) {
 
-    //FOR MODAL
-    $scope.modalShown = false;
-
-    $scope.toggleModal = function() {
-        $scope.modalShown = !$scope.modalShown;
-    };
-    //FOR MODAL <END>
 
     // == CHECK LOCAL STORAGE ==
     //if there's something in local storage
@@ -94,10 +87,28 @@ partsBinApp.controller('LocalStorageController', ['$scope', function($scope) {
         storeData($scope.storageArray);
 
         clearInputValues();
-    }
+
+    };
+
+    // == INCREMENT STOCK ==
+    $scope.IncrementStock = function(index) {
+        $scope.storageArray[index].stock ++;
+        storeData($scope.storageArray);
+    };
+
+    // == DECREMENT STOCK ==
+    $scope.DecrementStock = function(index) {
+        $scope.storageArray[index].stock --;
+
+        if($scope.storageArray[index].stock < 0) {
+            $scope.storageArray[index].stock = 0;
+        }
+
+        storeData($scope.storageArray);
+    };
 
     // == CLICK-DESTROY BIN ==
-    $scope.destroyBin = function(item) {
+    $scope.DestroyBin = function(item) {
         console.log('deleting element: ' + item);
 
         var index = $scope.storageArray.indexOf(item);
