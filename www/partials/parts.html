@@ -4,13 +4,23 @@
     <div id="top_bar">ID ME</div>
 
     <div id="bin_title">
-        <h1> {{name | uppercase }}'S PARTS BIN </h1>
+        <!--<h1> {{name | uppercase }}'S PARTS BIN </h1>-->
+        <h1> PARTS BIN </h1>
     </div>
 
-    <div id="tools_div">
-        <input type="button" id="add_button" class="button" value="+" ng-click="funky('this is way-some')">
-        <input type="text" max="100" size="27" ng-model="search_by" placeholder="search">
+    <div id="create_new_div">
+        <input id="type_input" type="text" max="100" size="27" ng-model="type" required placeholder="+type">
+        <input id="size_input" type="text" max="100" size="27" ng-model="size" required placeholder="+size">
+        <input id="stock_input" type="number" max="100" size="27" ng-model="stock" required placeholder="+stock">
+        <input type="button" id="add_button" class="button" value="+"
+               ng-click="stuffington('input: ' + type + ', ' + size + ', ' + stock)">
     </div>
+
+    <div id="search_div">
+        <input type="text" max="100" size="45" ng-model="search_by" placeholder="search">
+    </div>
+
+
 
     <div id="bin_body">
         <div class="bin">
@@ -25,7 +35,7 @@
 
             <div class="unit_count">
                 <span class="large_numbers">{{item.units}}</span> <br/>
-                <b>units left</b> <br/>
+                <b>stock</b> <br/>
             </div>
         </div>
     </div>

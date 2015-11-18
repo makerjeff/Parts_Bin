@@ -1,8 +1,29 @@
 // main APP js file. Includes controllers
 
-//DEFINE THE APP
+//DEFINE THE APP: ('<referred app name>', ['<service namespace>', '<service namespace>']);
 var partsBinApp = angular.module('PartsBinAppName', ['ngRoute']);
 
+
+//MODAL DIRECTIVE
+partsBinApp.directive('modalDialog', function() {
+    return {
+        restrict: 'E',
+        scope: {show: '='},
+        replace: true, // Replace with the template below
+        transclude: true, // we want to insert custom content inside the directive
+        link: function(scope, element, attrs) {
+            scope.dialogStyle = {};
+            if (attrs.width)
+                scope.dialogStyle.width = attrs.width;
+            if (attrs.height)
+                scope.dialogStyle.height = attrs.height;
+            scope.hideModal = function() {
+                scope.show = false;
+            };
+        },
+        templateUrl: 'templates/modal_template.html' // See below
+    };
+});
 
 
 //configure app
@@ -14,6 +35,15 @@ partsBinApp.config(['$routeProvider', function($routeProvider){
     controller:'PartsController'
   });
 
+  $routeProvider.when('/local', {
+    templateUrl:'partials/local_storage.html',
+    controller:'LocalStorageController'
+  });
+
+  $routeProvider.when('/modal', {
+      templateUrl:'partials/modal_practice.html',
+      controller:'ModalPracticeController'
+  })
   //any other location, redirect to about page
   $routeProvider.otherwise({
     redirectTo:'/parts'
@@ -21,46 +51,6 @@ partsBinApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 
-//DEFINE CONTROLLERS
-
-partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($scope, $http, $sce) {
-   //===== CONSTRUCTORS =====
-
-    //===== VARS ======
-    $scope.name = 'Jeff';
-    $scope.stuff = {value:'dummy manual input'};
-
-    //grab data via angular XHR
-    $http.get('js/data.json').success(function(data) {
-        $scope.bins = data; //data is a special data object, needs to be put into array
-    });
-
-    //grab the button
-    $scope.add_button = document.getElementById('add_button');
-
-    //grab CREATOR div
-    $scope.creator = document.getElementById('creator');
-    $scope.creator_type = document.getElementById('input_type');
-    $scope.creator_size = document.getElementById('input_size');
-    $scope.creator_units = document.getElementById('input_units');
-    $scope.creator.style.visibility = 'hidden';
-
-    //NG-CLICK FUNCTIONS
-    // test function
-    $scope.funky = function(message) {
-        console.log(message);
-        $scope.creator.style.visibility = 'visible';
-    };
-
-    $scope.say_something = function(message) {
-       modal_popper($scope);
-    };
 
 
-
-}]);
-
-function modal_popper($scope) {
-    console.log('hello');
-}
 
