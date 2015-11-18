@@ -1,9 +1,0 @@
-SCHEMA:
-
-NAME:
-- 
-
-PARTS:
-- type
-- size
-- units
