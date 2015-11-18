@@ -1,6 +1,16 @@
 <section>
     <button ng-click='toggleModal()'>Open Modal Dialog</button>
+
+    <!-- CONTENT OF MODAL SITS IN THIS SECTION -->
     <modal-dialog show='modalShown' width='750px' height='60%'>
         <p>Modal Content Goes here<p>
+        <p>This somehow works</p>
+
+        <div>
+            <div ng-repeat="item in anArray">
+                {{item.name}}, {{item.job}}
+            </div>
+
+        </div>
     </modal-dialog>
 </section>

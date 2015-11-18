@@ -17,6 +17,12 @@ partsBinApp.controller('PartsController', ['$scope','$http', '$sce', function($s
         $scope.bins = data; //data is a special data object, needs to be put into array
     });
 
+    //stuff
+    $scope.stuffington = function(message) {
+        alert(message);
+        clearInputValues();
+    }
+
 }]);
 
 // ===============================
@@ -27,9 +33,29 @@ partsBinApp.controller('ModalPracticeController', ['$scope', function($scope) {
 
     //copied from template
     $scope.modalShown = false;
+
     $scope.toggleModal = function() {
         $scope.modalShown = !$scope.modalShown;
     };
+
+    $scope.anArray = [
+        {
+            name:'jeff',
+            job: 'creative tech'
+        },
+        {
+            name:'shirley',
+            job:'teacher'
+        },
+        {
+            name:'wayne',
+            job:'analyst / tutor'
+        },
+        {
+            name:'wynbert',
+            job:'IT professional'
+        }
+    ];
 
 }]);
 
@@ -39,6 +65,14 @@ partsBinApp.controller('ModalPracticeController', ['$scope', function($scope) {
 
 //messing around with local storage
 partsBinApp.controller('LocalStorageController', ['$scope', function($scope) {
+
+    //FOR MODAL
+    $scope.modalShown = false;
+
+    $scope.toggleModal = function() {
+        $scope.modalShown = !$scope.modalShown;
+    };
+    //FOR MODAL <END>
 
     // == CHECK LOCAL STORAGE ==
     //if there's something in local storage

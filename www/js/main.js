@@ -4,12 +4,11 @@
 var partsBinApp = angular.module('PartsBinAppName', ['ngRoute']);
 
 
+//MODAL DIRECTIVE
 partsBinApp.directive('modalDialog', function() {
     return {
         restrict: 'E',
-        scope: {
-            show: '='
-        },
+        scope: {show: '='},
         replace: true, // Replace with the template below
         transclude: true, // we want to insert custom content inside the directive
         link: function(scope, element, attrs) {

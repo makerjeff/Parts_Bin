@@ -53,6 +53,9 @@ html {
   font-size: 16px;
   font-family: "PT Sans", sans-serif; }
 
+body {
+  margin: 0 0 20px 0; }
+
 h1 {
   font-size: 2em;
   font-family: "Montserrat", sans-serif; }
@@ -109,26 +112,52 @@ footer {
   width: 100%;
   background: black; }
 
-#tools_div {
+#search_div {
+  font-size: 1.2em;
   display: flex;
   justify-content: center;
   margin: 0 0 10px 0; }
-  #tools_div input {
+  #search_div input {
     padding: 10px;
     font-size: 1.5em;
     background: rgba(255, 255, 255, 0.1);
     border-style: none;
     border-radius: 5px;
     color: black; }
-  #tools_div input:focus {
+  #search_div input:focus {
     outline: none; }
-  #tools_div .button {
+  #search_div .button {
     color: black;
     background: rgba(255, 255, 255, 0);
     border-radius: 30%;
     border-width: 2px;
     border-style: solid;
     border-color: black;
+    margin-right: 10px; }
+
+#create_new_div {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 10px 0; }
+  #create_new_div input {
+    padding: 10px;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    margin: 0 5px 0 5px; }
+  #create_new_div input:focus {
+    outline: none; }
+  #create_new_div .button {
+    color: black;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 30%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 10px;
     margin-right: 10px; }
 
 ::-webkit-input-placeholder {

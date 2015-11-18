@@ -11,6 +11,7 @@ DONE - utilize Angular event handling (ng-repeat + ng-click(ngClick), ng-mouseov
 DONE - design local storage schema
 DONE - implement local Storage 
 - turn units into html5 'number' inputs to be able to increment using arrow keys etc
+- increment and decrement numbers
 - IMPLEMENT on PARTS.HTML
 
 
